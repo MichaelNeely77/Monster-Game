@@ -31,14 +31,11 @@ function attackMonster(mode) {
 
 
 function attackHandler() {
-
     attackMonster('ATTACK');
-
 }
 
 function strongAttackHandler() {
     attackMonster('STRONG_ATTACK');
-   
 }
 
 attackBtn.addEventListener('click', attackHandler);
