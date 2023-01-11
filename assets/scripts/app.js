@@ -13,6 +13,7 @@ adjustHealthBars(chosenMaxLife);
 function reset() {
     currentMonsterHealth = chosenMaxLife;
     currentPlayerHealth = chosenMaxLife;
+    resetGame();
 }
 
 
@@ -27,14 +28,18 @@ function endRound() {
         currentPlayerHealth = initialPlayerHealth;
         alert('You would be dead but the boonus life saved you!');
         setPlayerHealth(initialPlayerHealth);
+        reset();
     }
 
     if(currentMonsterHealth <= 0 && currentPlayerHealth > 0) {
         alert("You won!");
+        reset();
     }  else if(currentPlayerHealth <= 0 && currentMonsterHealth > 0) {
         alert('You lost!');
+        reset();
     } else if(currentPlayerHealth <= 0 && currentMonsterHealth <= 0) {
         alert('"You have a draw!"');
+        reset();
     }
 }
 
