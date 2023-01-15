@@ -38,7 +38,6 @@ function endRound() {
         currentPlayerHealth = initialPlayerHealth;
         alert('You would be dead but the boonus life saved you!');
         setPlayerHealth(initialPlayerHealth);
-
     }
 
     if(currentMonsterHealth <= 0 && currentPlayerHealth > 0) {
